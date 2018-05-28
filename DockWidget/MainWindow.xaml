@@ -1,0 +1,26 @@
+﻿<Window x:Class="DockWidget.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DockWidget"
+        mc:Ignorable="d"
+        Title="MainWindow" ResizeMode="NoResize" Width="50" ShowInTaskbar="True" WindowStyle="None"
+         Left="0"  SizeToContent="Width" Loaded="Window_Loaded">
+    <DockPanel LastChildFill="False" HorizontalAlignment="Center">
+        <StackPanel Background="Black" Opacity="0.3" DockPanel.Dock="Left">
+            <Button Width="50" Opacity="1" Click="Gmail_Click">
+                <Image Source="Images\gmail.png"></Image>
+            </Button>
+            <Button Width="50" Opacity="1" Click="FB_Click">
+                <Image Source="Images\facebook.png"></Image>
+            </Button>
+            <Button Width="50" Opacity="1" Click="Search_Click" Name="SearchButton">
+                <Image Source="Images\search.png"></Image>
+            </Button>
+            <StackPanel Name="txtPanel" Width="50" Orientation="Horizontal" HorizontalAlignment="Center" Visibility="Collapsed">
+                <TextBox Name="serachText" Width="50" LostFocus="text_LostFocus"></TextBox>
+            </StackPanel>
+        </StackPanel>
+    </DockPanel>
+</Window>

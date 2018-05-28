@@ -1,0 +1,14 @@
+c:\users\jraval\source\repos\DockWidget\DockWidget\obj\Debug\DockWidget.csprojResolveAssemblyReference.cache
+c:\users\jraval\source\repos\DockWidget\DockWidget\obj\Debug\MainWindow.g.cs
+c:\users\jraval\source\repos\DockWidget\DockWidget\obj\Debug\App.g.cs
+c:\users\jraval\source\repos\DockWidget\DockWidget\obj\Debug\DockWidget_MarkupCompile.cache
+c:\users\jraval\source\repos\DockWidget\DockWidget\obj\Debug\DockWidget_MarkupCompile.lref
+c:\users\jraval\source\repos\DockWidget\DockWidget\bin\Debug\DockWidget.exe
+c:\users\jraval\source\repos\DockWidget\DockWidget\bin\Debug\DockWidget.pdb
+c:\users\jraval\source\repos\DockWidget\DockWidget\obj\Debug\MainWindow.baml
+c:\users\jraval\source\repos\DockWidget\DockWidget\obj\Debug\DockWidget.g.resources
+c:\users\jraval\source\repos\DockWidget\DockWidget\obj\Debug\DockWidget.Properties.Resources.resources
+c:\users\jraval\source\repos\DockWidget\DockWidget\obj\Debug\DockWidget.csproj.GenerateResource.cache
+c:\users\jraval\source\repos\DockWidget\DockWidget\obj\Debug\DockWidget.csproj.CoreCompileInputs.cache
+c:\users\jraval\source\repos\DockWidget\DockWidget\obj\Debug\DockWidget.exe
+c:\users\jraval\source\repos\DockWidget\DockWidget\obj\Debug\DockWidget.pdb
