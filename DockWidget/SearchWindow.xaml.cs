@@ -11,58 +11,39 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace DockWidget
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for SearchWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SearchWindow : Window
     {
         public bool IsInstalled { get; set; }
-
-        public MainWindow()
+        public SearchWindow()
         {
             IsInstalled = IsApplictionInstalled("Opera");
             InitializeComponent();
         }
 
-        public void Gmail_Click(object sender, RoutedEventArgs e)
+        private void serachText_LostFocus(object sender, RoutedEventArgs e)
         {
-            var prs = IsInstalled ? new ProcessStartInfo("Opera.exe") : new ProcessStartInfo("IExplore.exe");
-            prs.Arguments = "http://gmail.com";
-            Process.Start(prs);
-        }
-
-        public void FB_Click(object sender, RoutedEventArgs e)
-        {
-            var prs = IsInstalled ? new ProcessStartInfo("Opera.exe") : new ProcessStartInfo("IExplore.exe");
-            prs.Arguments = "http://facebook.com";
-            Process.Start(prs);
-        }
-
-        public void Search_Click(object sender, RoutedEventArgs e)
-        {
-            //txtPanel.Visibility = Visibility.Visible;
-            SearchWindow searchObj = new SearchWindow();
-            searchObj.Show();
-            SearchButton.Visibility = Visibility.Visible;
-        }
-
-        private void text_LostFocus(object sender, RoutedEventArgs e)
-        {
+            this.Close();
             TextBox textBox = sender as TextBox;
             if (!string.IsNullOrEmpty(textBox.Text))
             {
                 var prs = IsInstalled ? new ProcessStartInfo("Opera.exe") : new ProcessStartInfo("IExplore.exe");
                 prs.Arguments = "https://www.google.com/search?q=" + textBox.Text;
                 Process.Start(prs);
-                //txtPanel.Visibility = Visibility.Collapsed;
-                SearchButton.Visibility = Visibility.Visible;
-                textBox.Text = string.Empty;
+                serachText.Text = string.Empty;
             }
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            serachText.Text = string.Empty;
+            this.Close();
         }
 
         public static bool IsApplictionInstalled(string p_name)
@@ -108,14 +89,6 @@ namespace DockWidget
 
             // NOT FOUND
             return false;
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            var heightScreen = System.Windows.SystemParameters.PrimaryScreenHeight;
-            this.Height = heightScreen;
-            var destopWorkingArea = System.Windows.SystemParameters.WorkArea;
-            this.Top = destopWorkingArea.Top;
         }
     }
 }

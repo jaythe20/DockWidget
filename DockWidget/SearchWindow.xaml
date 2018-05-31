@@ -1,0 +1,25 @@
+﻿<Window x:Class="DockWidget.SearchWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DockWidget"
+        mc:Ignorable="d"
+        Title="SearchWindow" Height="450" Width="800" ResizeMode="NoResize"
+        WindowState="Maximized" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+    <DockPanel LastChildFill="False" HorizontalAlignment="Center">
+        <Border BorderBrush="Black"
+            BorderThickness="2"
+            VerticalAlignment="Center"
+            CornerRadius="5" Width="500" Background="Black">
+            <StackPanel Margin="5"
+                    Orientation="Horizontal" Name="txtPanel" HorizontalAlignment="Center" Visibility="Visible">
+                <Image Source="Images\google.png" Height="35"/>
+                <TextBox Name="serachText" Margin="0 0 3 0" Width="410" Height="35" LostFocus="serachText_LostFocus"></TextBox>
+                <Button Name="btnClose" Content="X" Width="30" Height="35" Click="btnClose_Click"></Button>
+            </StackPanel>
+
+
+        </Border>
+    </DockPanel>
+</Window>

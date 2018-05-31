@@ -18,9 +18,9 @@
             <Button Width="50" Opacity="1" Click="Search_Click" Name="SearchButton">
                 <Image Source="Images\search.png"></Image>
             </Button>
-            <StackPanel Name="txtPanel" Width="50" Orientation="Horizontal" HorizontalAlignment="Center" Visibility="Collapsed">
+            <!--<StackPanel Name="txtPanel" Width="50" Orientation="Horizontal" HorizontalAlignment="Center" Visibility="Collapsed">
                 <TextBox Name="serachText" Width="50" LostFocus="text_LostFocus"></TextBox>
-            </StackPanel>
+            </StackPanel>-->
         </StackPanel>
     </DockPanel>
 </Window>
